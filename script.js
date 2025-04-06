@@ -1,4 +1,5 @@
-function volume_sphere() {
+function volume_sphere(event) {
+	event.preventDefault();
 	var volume;
 	var radius=document.getElementById('radius').value;
 	radius=Math.abs(radius);
@@ -8,4 +9,4 @@ function volume_sphere() {
 	
     //Write your code here
 } 
-//window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
