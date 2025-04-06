@@ -1,9 +1,11 @@
 function volume_sphere() {
-	let height=parseFloat(document.getElementById("height").value);
-	let radius=parseFloat(document.getElementById("radius").value);
-
-	let volume=Math.PI*radius**2**height;
-	document.getElementById('Calculate').innerHTML=volume;
+	var volume;
+	var radius=document.getElementById('radius').value;
+	radius=Math.abs(radius);
+	volume=(4/3)*Math.PI*Math.pow(radius,3);
+	volume=volume.toFixed(4);
+	documument.getElementById('volume').value=volume;
+	
     //Write your code here
 } 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
